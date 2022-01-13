@@ -18,7 +18,7 @@ shop_index:
     path: /shop
     controller: App\Controller\ShopController::indexShop
 
-# Contact Page
-contact_index:
-    path: /contact
-    controller: App\Controller\ContactController::indexContact
+# Newsletter Page
+newsletter_index:
+    path: /newsletter
+    controller: App\Controller\NewsletterController::indexNewsletter
