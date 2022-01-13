@@ -5,14 +5,13 @@ namespace App\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class HomeController extends AbstractController
+class ShopController extends AbstractController
 {
-
     /**
-     * Home Page
+     * Index Shop
      */
-    public function index(): Response
+    public function indexShop() : Response
     {
-        return $this->render('home/home.index.twig', []);
+        return $this->render('shop/shop.index.twig', []);
     }
 }

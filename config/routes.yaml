@@ -1,7 +1,24 @@
+# Controllers
 controllers:
     resource: ../src/Controller/
     type: annotation
 
+# Kernel
 kernel:
     resource: ../src/Kernel.php
     type: annotation
+
+# Home Page
+home_index:
+    path: /
+    controller: App\Controller\HomeController::index
+
+# Shop Page
+shop_index:
+    path: /shop
+    controller: App\Controller\ShopController::indexShop
+
+# Contact Page
+contact_index:
+    path: /contact
+    controller: App\Controller\ContactController::indexContact
