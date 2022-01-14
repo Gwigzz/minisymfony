@@ -17,8 +17,8 @@ class NewsletterController extends AbstractController
 
         $form = $this->createForm(NewsletterType::class, $newsletter);
 
-        return $this->renderForm('newsletter/newsletter.index.twig',[
-            'formnewsletter' => $form,
+        return $this->render('newsletter/newsletter.index.twig',[
+            'formnewsletter' => $form->createView(),
         ]);
     }
 }

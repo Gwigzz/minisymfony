@@ -1,4 +1,7 @@
-:root{
+/* Import police google font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+:root {
     --bestBlue: #0C91FF;
     --grey-light: #CCCC;
     --pad-a: 0.5rem 0.9rem;
@@ -7,10 +10,15 @@
 
 body {
     margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+p{
+    margin: 0;
 }
 
 /* header nav */
-.nav-header nav ul{
+.nav-header nav ul {
     display: flex;
     justify-content: center;
     gap: 1.4rem;
@@ -20,7 +28,7 @@ body {
     list-style: none;
 }
 
-.nav-header nav ul li a{
+.nav-header nav ul li a {
     color: var(--bestBlue);
     border: 1px solid var(--grey-light);
     text-decoration: none;
@@ -34,8 +42,15 @@ body {
     background-color: var(--grey-light);
 }
 
+/* main */
+.container-main {
+    padding: 0.4rem;
+    margin: 3.5rem auto 2.5rem auto;
+    max-width: 750px;
+}
+
 /* Footer */
-.container-footer footer{
+.container-footer footer {
     margin-top: 350px;
     padding: 2.2rem;
     display: flex;
@@ -53,12 +68,21 @@ body {
 
 /* max-width 550px */
 @media screen and (max-width: 550px) {
+
     /* header nav */
-    .nav-header nav ul{
+    .nav-header nav ul {
         gap: 0.2rem;
     }
+
+    /* main */
+    .container-main {
+        padding: 0.1rem;
+        width: auto;
+        margin: 1.2rem auto;
+    }
+
     /* footer */
-    .container-footer footer{
+    .container-footer footer {
         display: block;
         text-align: center;
     }
