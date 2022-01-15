@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-class Newsletter
+class NewsletterEntity
 {
     protected $email;
 
