@@ -5,10 +5,12 @@ namespace App\Controller;
 use App\Entity\Newsletter;
 use App\Form\Type\NewsletterType;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class NewsletterController extends AbstractController
 {
+    #[Route('/newsletter', name: 'newsletter_page')]
     public function indexNewsletter(): Response
     {
 
