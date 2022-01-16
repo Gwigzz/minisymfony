@@ -7,6 +7,13 @@
 <h1>Register</h1>
 <p>Welcome to the register !</p>
 
+
+<div>
+    {% for alerts in register_alert %}
+    <p class="alert alert-info">Hello <span class="fw-bold">{{ alerts }}</span>, you'r welcome !</p>
+    {% endfor %}
+</div>
+
 {{ form(registerForm) }}
 
 {% endblock %}
