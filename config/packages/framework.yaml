@@ -12,9 +12,12 @@ framework:
         # ID of the service user for session storage
         handler_id: null
         # improves the security of the cookies usef for sessions
-        cookie_secure: auto
-        cookie_samesite: lax
-        storage_factory_id: session.storage.factory.native
+        cookie_secure: 'auto'
+        cookie_samesite: 'lax'
+
+    # form
+    form:
+        legacy_error_messages: false
 
     #esi: true
     #fragments: true

@@ -6,9 +6,8 @@ use App\Entity\NewsletterEntity;
 use App\Form\Type\NewsletterType;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class NewsletterController extends AbstractController
+class NewsletterController extends Controller
 {
     #[Route('/newsletter', name: 'newsletter_page')]
     public function indexNewsletter(): Response

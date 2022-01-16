@@ -2,16 +2,30 @@
 
 namespace App\Entity;
 
-class RegisterEntity{
+use Symfony\Component\Validator\Constraints as Assert;
 
-    protected string $firstname;
-    protected string $lastname;
+class RegisterEntity
+{
 
-    
+    #[Assert\NotBlank(
+        message: 'Champ obligatoire.',
+    )]
+    #[Assert\Type('string')]
+    #[Assert\Regex(
+        pattern: '/^[a-z]+$/i',
+        htmlPattern: '^[a-zA-Z]+$',
+    )]
+    #[Assert\Length(
+        min: 3,
+        max: 10,
+        minMessage: 'Your first name must be at least {{ limit }} characters long',
+        maxMessage: 'Your first name cannot be longer than {{ limit }} characters',
+    )]
+    protected $firstname;
 
     /**
      * Get the value of firstname
-     */ 
+     */
     public function getFirstname()
     {
         return $this->firstname;
@@ -21,30 +35,10 @@ class RegisterEntity{
      * Set the value of firstname
      *
      * @return  self
-     */ 
+     */
     public function setFirstname($firstname)
     {
         $this->firstname = $firstname;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of lastname
-     */ 
-    public function getLastname()
-    {
-        return $this->lastname;
-    }
-
-    /**
-     * Set the value of lastname
-     *
-     * @return  self
-     */ 
-    public function setLastname($lastname)
-    {
-        $this->lastname = $lastname;
 
         return $this;
     }

@@ -12,17 +12,13 @@ class RegisterType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('FirstName', TextType::class,[
+            ->add('FirstName', TextType::class, [
+                'label' => 'First Name',
                 'attr' => [
-                    'placeholder' => 'First Name'
-                ]
+                    'placeholder' => 'You\'r name here...'
+                ],
+                'help' => 'You\'r name'
             ])
-            ->add('LastName', TextType::class, [
-                'attr' => [
-                    'placeholder' => 'Last Name'
-                ]
-            ])
-            ->add('Valider', SubmitType::class)
-        ;
+            ->add('Register', SubmitType::class);
     }
 }
