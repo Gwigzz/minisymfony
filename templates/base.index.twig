@@ -6,6 +6,7 @@
     <title>{% block title %}Mini Symfony{% endblock %}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/style/css/style.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{asset('assets/style/css/bootstrap.min.css')}}" />
     {% block stylesheets %}{% endblock %}
@@ -18,10 +19,10 @@
         <div class="nav-header">
             <nav>
                 <ul>
-                    <li><a href="{{ asset('') }}" title="Home">Home</a></li>
-                    <li><a href="{{ asset('shop') }}" title="Shop">Shop</a></li>
-                    <li><a href="{{ asset('register') }}" title="Contact">register</a></li>
-                    <li><a href="{{ asset('article') }}" title="Contact">Article</a></li>
+                    <li><a href="{{ asset('') }}">Home</a></li>
+                    <li><a href="{{ asset('shop') }}">Shop</a></li>
+                    <li><a href="{{ asset('register') }}">register</a></li>
+                    <li><a href="{{ asset('article') }}">Article</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,6 +44,7 @@
         </footer>
     </div>
 
+    <!-- JS -->
     {% block javascripts %}{% endblock %}
 
 </body>
