@@ -17,7 +17,7 @@ class RegisterEntity
     )]
     #[Assert\Length(
         min: 3,
-        max: 10,
+        max: 20,
         minMessage: 'Your first name must be at least {{ limit }} characters long',
         maxMessage: 'Your first name cannot be longer than {{ limit }} characters',
     )]

@@ -19,16 +19,23 @@ class RegisterController extends Controller
         $form = $this->createForm(RegisterType::class, $register);
 
         $form->handleRequest($request);
+        // If Form is submit
         if($form->isSubmitted() && $form->isValid()){
+
             // dump($form->getData());
+
+            // Register flash alert
             $this->sess->getFlashBag()->add('register_alert', $register->getFirstname());
 
+            // Redirect to route
             return $this->redirectToRoute('register_page');
         }
 
 
         return $this->render('register/register.index.twig', [
+            // Creat a view for Form
             'registerForm' => $form->createView(),
+            // Get flash alert
             'register_alert' => $this->sess->getFlashBag()->get('register_alert')
         ]);
     }
