@@ -16,7 +16,7 @@ abstract class Controller extends AbstractController
         $this->sess = new Session();
         if (session_status() === PHP_SESSION_NONE) {
             session_name('SymfonySession');                      # session name
-            $this->sess->start() ?? session_start();         # start session
+            $this->sess->start() ?? session_start();            # start session
         }
     }
 
